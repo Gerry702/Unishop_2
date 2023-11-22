@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Unishop</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h1>Description textuelle des cas d'utilisation</h1>
+        <ol>
+            <li>
+                <div id="1">
+                    <strong>Cas d'utilisation:</strong><span>rechercher produit</span><br/>
+                    <strong>But:</strong><span>rechercher un produit dans la plateforme</span><br/>
+                    <strong>Acteurs:</srong><span> Utilisateur</span><br/>
+                    <strong>Préconditions:</strong>
+                    <ul>
+                       <li>L'utilisateur est connecté sur le site web/l'application</li>
+                       <li>Le site web/l'application contient un catalogue de produits</li>
+                    </ul>
+                    <strong>Scénario principal:</strong>
+                    <ol>
+                       <li>L'utilisateur accède à la page/l'écran de recherche</li>
+                       <li>Il saisit un ou plusieurs mots-clés correspondant au produit recherché</li>
+                       <li>Il valide sa recherche</li>
+                       <li>Le système affiche la liste des produits correspondant aux critères saisis</li>
+                       <li>L'utilisateur consulte les résultats et sélectionne un produit qui l'intéresse</li>
+                       <li>Le système affiche la fiche détaillée du produit sélectionné</li>
+                    </ol>
+                    <strong>Scénario alternatifs:</strong>
+                    <div>
+                       3a. Aucun produit ne correspond aux critères saisis<br>
+                       1. Le système affiche un message indiquant qu'aucun résultat n'a été trouvé <br>
+                   
+                       4a. De nombreux produits correspondent aux critères<br>
+                           1. Le système propose des filtres supplémentaires (catégorie, prix, marque...) pour affiner la recherche<br>
+                           2. L'utilisateur applique les filtres souhaités <br>
+                           3. Le système met à jour la liste des résultats en fonction des filtres<br>
+                           
+                       5a. L'utilisateur ne trouve pas le produit recherché<br>
+                           1. Il modifie ses critères de recherche<br>
+                           2. Le scénario reprend à l'étape 2<br>
+                    </div><br>
+                    <strong>posts conditions:</strong>
+                       <ul>
+                           <li>L'utilisateur a trouvé un produit correspondant à sa recherche</li>
+                           <li>Le système a retourné les résultats correspondants</li>
+                       </ul>
+               </div><br>
+            </li>
+            <li>
+                <div id="2">
+                    <strong>Cas d'utilisation:</strong><span>passer une commande</span><br/>
+                    <strong>But:</strong><span>passer une commande dans la plateforme</span><br/>
+                    <strong>Acteurs:</srong><span> Client</span><br/>
+                    <strong>Préconditions:</strong>
+                    <ul>
+                       <li>Le client est authentifié sur le site marchand</li>
+                       <li>Le client a ajouté un ou plusieurs produits dans son panier</li>
+                    </ul>
+                    <strong>Scénario principal:</strong>
+                    <ol>
+                       <li>Le client accède à son panier et vérifie que les produits ajoutés correspondent à sa commande</li>
+                       <li>Il sélectionne l'option "Passer la commande" </li>
+                       <li>Il vérifie le récapitulatif de la commande (produits, quantités, prix total)</li>
+                       <li>Il choisit l'adresse de livraison parmi celles enregistrées sur son compte ou en saisit une nouvelle</li>
+                       <li>Il sélectionne le mode de livraison parmi les options proposées</li>
+                       <li>Il vérifie le montant total de la commande incluant les frais de livraison</li>
+                       <li>Il sélectionne le mode de paiement parmi les options proposées (carte bancaire, Paypal...)</li>
+                       <li> Il valide sa commande</li>
+                       <li>Le système enregistre la commande et affiche le numéro de suivi</li>
+                       <li>Le système envoie un email de confirmation de commande au client</li>
+                    </ol>
+                    <strong>Scénario alternatifs:</strong>
+                    <div>
+                        2a. Le panier est vide <br>
+                        1. Le système affiche un message indiquant que le panier est vide <br>
+                        2. Le client est redirigé vers le catalogue pour ajouter des produits <br>
+                    
+                        4a. Le client souhaite livrer à une nouvelle adresse <br>
+                            1. Il saisit les informations de la nouvelle adresse de livraison <br>
+                            2. Le système enregistre cette nouvelle adresse dans le compte client <br>
+                        
+                        6a. Le client ne valide pas le montant de la commande <br>
+                            1. Il modifie sa commande (produits, quantités, adresse de livraison...) <br>
+                            2. Le scénario reprend à l'étape 3 <br>
+                            
+                        7a. Le mode de paiement choisi est refusé <br>
+                            1. Le système affiche un message d'erreur <br>
+                            2. Le client sélectionne un autre mode de paiement <br>
+                            3. Le scénario reprend à l'étape 6
+                    </div><br>
+                    <strong>posts conditions:</strong>
+                       <ul>
+                           <li>La commande est enregistrée et confirmée</li>
+                           <li>Le stock des produits commandés est mis à jour</li>
+                           <li>Le client reçoit un email de confirmation de commande avec le numéro de suivi</li>
+                           <li>Le compte client est mis à jour avec l'historique des commandes</li>
+                       </ul>
+               </div> <br>
+            </li>
+            <li>
+                <div id="3">
+                    <strong>Cas d'utilisation:</strong><span>gestion d'une commande</span><br/>
+                    <strong>But:</strong><span>gérer une commande dans la plateforme</span><br/>
+                    <strong>Acteurs:</srong><span> Vendeur/Administrateur </span><br/>
+                    <strong>Préconditions:</strong>
+                    <ul>
+                       <li>Le vendeur/administrateur est authentifié sur l'interface d'administration </li>
+                       <li>Il existe des commandes passées par des clients</li>
+                    </ul>
+                    <strong>Scénario principal:</strong>
+                    <ol>
+                       <li>Le vendeur/administrateur accède à la liste des commandes </li>
+                       <li>Il sélectionne une commande</li>
+                       <li>Il visualise les détails de la commande (client, produits, date, montant, état actuel de la commande...)</li>
+                       <li>Selon l'état actuel, il effectue une action : <br>
+                        - Commande validée : il prépare la commande et met à jour son état à "en préparation" <br>
+                        - Commande en préparation : il confirme l'expédition et met à jour à "expédiée" <br>
+                        - Commande expédiée : il saisit le numéro de suivi et met à jour à "livrée" <br></li>
+                       <li>Il enregistre la mise à jour de l'état de la commande</li>
+                    </ol>
+                    <strong>Scénario alternatifs:</strong>
+                    <div>
+                        2a. Le vendeur/administrateur filtre les commandes par état, client ou date <br>
+                        3a. La commande nécessite une action particulière: <br>
+                        - Commande annulée par le client : il confirme l'annulation <br>
+                        - Problème de paiement : il contacte le client <br>
+                        - Produit indisponible : il contacte le client et annule la commande <br>
+                        
+                        4a. La commande est marquée comme "livrée" <br>
+                        - Il vérifie qu'il n'y a pas de retour client à traiter <br>
+                        - Il clôture la commande <br>
+                    </div><br>
+                    <strong>posts conditions:</strong>
+                       <ul>
+                           <li>L'état de la commande est mis à jour dans le système</li>
+                           <li>Le client est informé par email des changements d'état de sa commande</li>
+                           <li>La commande est traitée jusqu'à clôture</li>
+                       </ul>
+               </div> <br>
+            </li>
+            <li>
+                <div id="4">
+                    <strong>Cas d'utilisation:</strong><span>modifier le panier d'achat</span><br/>
+                    <strong>But:</strong><span>modifier le panier d'achat dans la plateforme</span><br/>
+                    <strong>Acteurs:</srong><span> Client </span><br/>
+                    <strong>Préconditions:</strong>
+                    <ul>
+                       <li>Le client est authentifié sur le site de e-commerce</li>
+                       <li>Le client a ajouté un ou plusieurs produits dans son panier d'achat</li>
+                    </ul>
+                    <strong>Scénario principal:</strong>
+                    <ol>
+                       <li>Le client accède à son panier d'achat</li>
+                       <li>Il visualise le récapitulatif du panier avec la liste des produits ajoutés et les quantités</li>
+                       <li>
+                            Il modifie le panier selon ses besoins : <br>
+                            3.1 Il met à jour la quantité d'un produit <br>
+                            3.2 Il supprime un produit du panier <br>
+                            3.3 Il ajoute un nouveau produit au panier
+                       </li>
+                       <li>Une fois les modifications effectuées, il valide la mise à jour du panier</li>
+                       <li>Le système recalcule et affiche le nouveau récapitulatif du panier modifié</li>
+                    </ol>
+                    <strong>Scénario alternatifs:</strong>
+                    <div>
+                        2a. Le panier est vide <br>
+                            1. Le système affiche un message "Votre panier est vide"  <br>
+                            2. Le client est redirigé vers le catalogue pour ajouter des produits <br>
+                            
+                        3a. La quantité d'un produit est mise à 0 <br>
+                            1. Le système supprime le produit du panier <br>
+                            
+                        3b. La quantité saisie pour un produit n'est pas disponible en stock <br>
+                            1. Le système affiche un message d'erreur <br>
+                            2. Le client saisit une nouvelle quantité disponible <br>
+                            
+                        4a. Le client annule les modifications <br>
+                            1. Le panier reste inchangé, aucune mise à jour n'est effectuée <br>
+                    </div><br>
+                    <strong>posts conditions:</strong>
+                       <ul>
+                           <li>Le panier d'achat est mis à jour conformément aux modifications effectuées</li>
+                           <li>Les quantités de produits sont mises à jour en fonction du stock disponible</li>
+                           <li>Le montant total du panier est recalculé en fonction des modifications</li>
+                       </ul>
+               </div>
+            </li> <br>
+            <li>
+                <div id="5">
+                    <strong>Cas d'utilisation:</strong><span>afficher les métriques des activités</span><br/>
+                    <strong>But:</strong><span>afficher les métriques des activités dans la plateforme</span><br/>
+                    <strong>Acteurs:</srong><span> Administrateur </span><br/>
+                    <strong>Préconditions:</strong>
+                    <ul>
+                       <li> L'administrateur est authentifié sur l'interface d'administration du site</li>
+                       <li> Le site e-commerce enregistre les activités des utilisateurs (visites, commandes, paniers abandonnés, etc.)</li>
+                    </ul>
+                    <strong>Scénario principal:</strong>
+                    <ol>
+                       <li>L'administrateur accède à la section "Mesures et statistiques" de l'interface d'administration</li>
+                       <li>Il sélectionne la période sur laquelle il souhaite obtenir des métriques (jour, semaine, mois, année)</li>
+                       <li>
+                            Il sélectionne les indicateurs à afficher parmi les options proposées : <br>
+                            - Nombre de visites <br>
+                            - Nombre de commandes <br>
+                            - Paniers moyens <br>
+                            - Taux de conversion <br>
+                            - Produits les plus vendus <br>
+                            - Taux d'abandon de paniers <br>
+                            - Etc.
+                       </li>
+                       <li>Le système génère et affiche les graphiques correspondant aux indicateurs sélectionnés pour la période choisie</li>
+                    </ol>
+                    <strong>Scénario alternatifs:</strong>
+                    <div>
+                        2a. L'administrateur applique des filtres sur les métriques (catégorie de produits, localisation des visiteurs, etc.) <br>
+
+                        3a. L'administrateur choisit d'exporter les données sous forme de tableau ou fichier CSV <br>
+                    </div><br>
+                    <strong>posts conditions:</strong>
+                       <ul>
+                           <li>Les métriques demandées sont restituées à l'administrateur sous forme graphique ou dans un tableau pour analyse</li>
+                       </ul>
+               </div>
+            </li> <br>
+            <li>
+                <div id="6">
+                    <strong>Cas d'utilisation:</strong><span>trouver un revendeur</span><br/>
+                    <strong>But:</strong><span>trouver un revendeur dans la plateforme</span><br/>
+                    <strong>Acteurs:</srong><span> Client </span><br/>
+                    <strong>Préconditions:</strong>
+                    <ul>
+                       <li>Le client est authentifié sur le site de e-commerce</li>
+                       <li>Le client a ajouté un ou plusieurs produits dans son panier d'achat</li>
+                    </ul>
+                    <strong>Scénario principal:</strong>
+                    <ol>
+                       <li>Le client accède à la page "Nos revendeurs"</li>
+                       <li>Il indique sa localisation (code postal, ville, pays...)</li>
+                       <li>Il lance la recherche</li>
+                       <li>Le système affiche la liste des revendeurs agréés près de la localisation indiquée</li>
+                       <li>Le client sélectionne un revendeur dans la liste</li>
+                       <li>Le système affiche les coordonnées détaillées du revendeur : adresse, téléphone, site web, horaires d'ouverture...</li>
+                    </ol>
+                    <strong>Scénario alternatifs:</strong>
+                    <div>
+                        2a. Le client autorise l'accès à sa géolocalisation <br>
+                            1. La recherche est lancée automatiquement avec la localisation détectée <br>
+                            
+                        4a. Aucun revendeur n'est présent dans la zone  <br>
+                            1. Le système étend la recherche dans un rayon plus large <br>
+                            2. S'il n'y a toujours aucun résultat, il propose de contacter le service client <br>
+                            
+                        5a. Le client souhaite contacter directement le revendeur <br>
+                            1. Il clique sur le bouton "Appeler" pour appeler directement le revendeur <br> 
+                            2. Ou sur le bouton "Itinéraire" pour obtenir l'itinéraire jusqu'au revendeur <br>
+                    </div><br>
+                    <strong>posts conditions:</strong>
+                       <ul>
+                           <li>Le client a identifié un revendeur proche de lui et obtenu ses coordonnées</li>
+                       </ul>
+               </div>
+            </li> <br>
+            <li>
+                <div id="7">
+                    <strong>Cas d'utilisation:</strong><span>changer l'état d'une commande</span><br/>
+                    <strong>But:</strong><span>changer l'état d'une commande dans la plateforme</span><br/>
+                    <strong>Acteurs:</srong><span> Vendeur </span><br/>
+                    <strong>Préconditions:</strong>
+                    <ul>
+                       <li>Le vendeur est authentifié sur l'interface d'administration des commandes</li>
+                       <li>Il existe des commandes passées par les clients à différents stades (validée, en préparation, expédiée...)</li>
+                    </ul>
+                    <strong>Scénario principal:</strong>
+                    <ol>
+                       <li>Le vendeur sélectionne une commande à traiter</li>
+                       <li>Il visualise l'état actuel de la commande</li>
+                       <li>
+                            Selon cet état, il effectue l'action appropriée : <br>
+                            - Si l'état est "validée" : il passe la commande en "en préparation" <br>
+                            - Si l'état est "en préparation" : il passe la commande en "expédiée" <br>
+                            - Si l'état est "expédiée" : il saisit le numéro de suivi et passe en "livrée" <br>
+                       </li>
+                       <li>Il enregistre le changement d'état de la commande</li>
+                    </ol>
+                    <strong>Scénario alternatifs:</strong>
+                    <div>
+                        2a. La commande est annulée <br>
+                            1. Le vendeur passe la commande en "annulée" et confirme l'annulation <br>
+                            
+                        3a. Un problème empêche de changer l'état <br>
+                            1. Le vendeur le note dans le système et contacte le client <br>
+                            
+                        4a. La commande est "livrée" <br>
+                            1. Après quelques jours sans retour client, il passe la commande en "clôturée" <br>
+                    </div><br>
+                    <strong>posts conditions:</strong>
+                       <ul>
+                           <li>L'état de la commande est mis à jour dans le système</li>
+                           <li>Le client est notifié par email du changement d'état</li>
+                           <li>La commande progresse dans le processus de traitement</li>
+                       </ul>
+               </div>
+            </li> <br>
+            <li>
+                <div id="8">
+                    <strong>Cas d'utilisation:</strong><span>gestion d'un produit</span><br/>
+                    <strong>But:</strong><span>gestion d'un produit dans la plateforme</span><br/>
+                    <strong>Acteurs:</srong><span> Administrateur </span><br/>
+                    <strong>Préconditions:</strong>
+                    <ul>
+                       <li> L'administrateur est authentifié sur l'interface d'administration du catalogue produits</li>
+                       <li>Le catalogue contient des fiches produits existantes</li>
+                    </ul>
+                    <strong>Scénario principal:</strong>
+                    <ol>
+                       <li>L'administrateur recherche un produit par son nom ou sa référence</li>
+                       <li>Il accède à la fiche produit </li>
+                       <li>
+                            Il modifie les informations nécessaires : <br>
+                            - Caractéristiques du produit <br>
+                            - Description <br>
+                            - Prix <br>
+                            - Photos <br>
+                            - Référencement <br>  
+                            - Stock <br>
+                       </li>
+                       <li>Il enregistre les modifications</li>
+                    </ol>
+                    <strong>Scénario alternatifs:</strong>
+                    <div>
+                        2a. Le produit est introuvable <br>
+                            1. L'administrateur crée une nouvelle fiche produit <br>
+                            
+                        3a. Le produit doit être retiré du catalogue <br>
+                            1. L'administrateur désactive ou supprime la fiche produit <br>
+                            
+                        4a. Les modifications entraînent la création d'une nouvelle variante produit <br>
+                            1. L'administrateur duplique la fiche pour créer la variante  <br>
+                    </div><br>
+                    <strong>posts conditions:</strong>
+                       <ul>
+                           <li>La fiche produit est mise à jour dans le catalogue</li>
+                           <li>Les modifications sont répercutées sur le site (fiche produit, moteur de recherche)</li>
+                           <li>Le stock est mis à jour après modification des quantités</li>
+                       </ul>
+               </div>
+            </li> <br>
+            <li>
+                <div id="9">
+                    <strong>Cas d'utilisation:</strong><span>Confirmer la réception d'un produit</span><br/>
+                    <strong>But:</strong><span>Confirmer la réception d'un produit dans la plateforme</span><br/>
+                    <strong>Acteurs:</srong><span> Client </span><br/>
+                    <strong>Préconditions:</strong>
+                    <ul>
+                       <li> Le client a commandé un ou plusieurs produits sur le site e-commerce</li>
+                       <li>Les produits ont été livrés au client</li>
+                    </ul>
+                    <strong>Scénario principal:</strong>
+                    <ol>
+                       <li>Le client reçoit un email de confirmation de livraison pour sa commande</li>
+                       <li> Une fois sa commande réceptionnée, il se connecte sur son compte client</li>
+                       <li>Il accède à l'historique de ses commandes</li>
+                       <li>Il sélectionne la commande contenant le produit reçu </li>
+                       <li>Il clique sur le bouton "Confirmer réception"</li>
+                       <li>Il confirme avoir bien reçu le ou les produits</li>
+                    </ol>
+                    <strong>Scénario alternatifs:</strong>
+                    <div>
+                        2a. Le client n'a pas reçu la totalité de sa commande <br>
+                            1. Il signale les produits manquants dans la zone de commentaires <br>
+                        
+                        4a. Le client constate un problème sur le produit reçu <br>
+                            1. Il contacte le service client pour un échange ou remboursement <br>
+                        
+                        5a. Le client souhaite retourner un produit <br>
+                            1. Il demande un retour via son compte client ou le service client <br>
+                    </div><br>
+                    <strong>posts conditions:</strong>
+                       <ul>
+                           <li>La réception du produit est confirmée par le client</li>
+                           <li>Le système met à jour le statut de la commande en conséquence</li>
+                           <li>Le client peut désormais évaluer les produits reçus et la commande</li>
+                       </ul>
+               </div>
+            </li> <br>
+            <li>
+                <div id="10">
+                    <strong>Cas d'utilisation:</strong><span>offrir un produit</span><br/>
+                    <strong>But:</strong><span>offrir un produit dans la plateforme</span><br/>
+                    <strong>Acteurs:</srong><span> Client </span><br/>
+                    <strong>Préconditions:</strong>
+                    <ul>
+                       <li>Le client est authentifié sur le site e-commerce</li>
+                       <li>Il a sélectionné un ou plusieurs produits à offrir</li>
+                    </ul>
+                    <strong>Scénario principal:</strong>
+                    <ol>
+                       <li>Une fois les produits choisis, le client accède à son panier</li>
+                       <li>Il coche l'option "Ceci est un cadeau"</li>
+                       <li>Il renseigne les informations du destinataire : nom, adresse, email, numéro de téléphone</li>
+                       <li>Il choisit d'envoyer ou non un email au destinataire pour l'informer du cadeau</li>
+                       <li>Il valide et passe sa commande normalement en tant qu'expéditeur</li>
+                       <li>Une fois le paiement effectué, il reçoit un email de confirmation de commande</li>
+                       <li>Le destinataire reçoit également un email l'informant qu'un cadeau lui a été envoyé</li>
+                    </ol>
+                    <strong>Scénario alternatifs:</strong>
+                    <div>
+                        3a. Le client ne connaît pas toutes les informations du destinataire <br>
+                            1. Il coche l'option "Je compléterai les infos ultérieurement" <br>
+                            2. Il recevra un email après la commande pour compléter les infos <br>
+                            
+                        4a. Le client ne souhaite pas envoyer d'email au destinataire <br>
+                            1. Il décoche l'option pour que cela reste une surprise <br>
+                    </div><br>
+                    <strong>posts conditions:</strong>
+                       <ul>
+                           <li>Le produit est commandé en tant que cadeau pour un destinataire</li>
+                           <li>Les informations du destinataire sont enregistrées</li>
+                           <li>Le destinataire est informé par email qu'un cadeau lui a été expédié</li>
+                       </ul>
+               </div>
+            </li> <br>
+        </ol>
+    </body>
+</html>

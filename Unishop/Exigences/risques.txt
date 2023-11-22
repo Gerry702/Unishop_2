@@ -1,0 +1,14 @@
+1. Fuite de données personnelles ou financières des clients
+* Risque critique pour la réputation et la conformité juridique
+
+2.Indisponibilité du site web
+* Perte de ventes et d'audience, atteinte à la réputation
+
+3.Défauts critiques de sécurité
+* Possibilité de piratage, fuites de données
+
+4.Non-respect des délais de livraison
+* Mécontentement des clients, demandes de remboursement
+
+5.Problèmes avec le prestataire logistique
+* Retards de livraison, produits égarés ou endommagés

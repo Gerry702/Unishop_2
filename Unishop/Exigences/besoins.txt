@@ -1,0 +1,9 @@
+* Performance et disponibilité du site : le site doit être réactif et disponible 24/7, avec une infrastructure dimensionnée pour absorber les pics de charge.
+
+* Sécurité : le système doit protéger les données sensibles des clients (informations personnelles, bancaires...), prévenir la fraude et le piratage.
+
+* Capacité de stockage et d'évolution : le système doit pouvoir stocker de grands volumes de données produits, commandes, clients, et évoluer facilement.
+
+* Facilité d'utilisation : l'interface cliente doit être intuitive et simple d'usage pour les internautes.
+
+* Adaptabilité multi-supports : le site doit s'adapter aux différents supports de consultation (desktop, mobile, tablette).

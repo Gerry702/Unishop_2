@@ -1,0 +1,20 @@
+Acheteur: personne interessé par les produits de la plateforme et qui souhaite en obtenir
+
+Produit : divers matériel didactique que notre plateforme propose
+
+Panier d'achat : c'est un contenant, où sont conservés les produits sélectionnés par l'acheteur
+
+Montant total : représente le prix total des produits présents dans le panier de l'acheteur
+
+Commande : c'est une opération qui consiste pour un acheteur de manifester son interêt vis à vis de certains produits à l'endroit du revendeur, au fin de conclut un accord de coopération
+Livraison : opération entrepris par le revendeur, qui consiste à mettre à disposition de l'acheteur les produits de son panier d'achat depuis son lieu de confort
+
+Paiement : représente la contrepartie nonétaire de la part de l'acheteur vis à vis des produits du revendeur
+
+Revendeur : Personne qui met à disposition de la plateforme ses produits, dans le but de captiver l'attention de potentiel acheteur
+
+Métrique des activités : c'est une forme de graphe qui retrace les statistiques d'activités des utilisateurs dans la plateforme
+
+Liste des revendeurs : c'est une collection qui présente les informations des revendeurs relatifs à un produit précis
+
+état d'une commande : c'est une caractéristique que l'on affecte à une commande en fonction de son état d'évolution
